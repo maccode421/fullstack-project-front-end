@@ -1,2 +1,45 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background-color: #39ff14;
+}
+
+h1 {
+  // border: groove;
+  color: #39ff14;
+  font-style: oblique;
+  font-weight: bolder;
+  left: 75px;
+  margin-top: 0;
+  position: absolute;
+  top: 5px;
+}
+
+img {
+  border-radius: 7px;
+  height: 350px;
+  left: 70px;
+  position: absolute;
+  width: 90%;
+}
+
+#signOut {
+  // float: right;
+  position: absolute;
+  right: 75px;
+  top: 356px;
+}
+
+.seafood {
+  border: groove;
+}
+
+.dropdown {
+  // border: groove;
+  display: inline-block;
+  float: inherit;
+  padding-left: 70px;
+  padding-top: 350px;
+  // position: absolute;
+}
