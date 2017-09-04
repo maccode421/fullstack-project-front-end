@@ -38,7 +38,7 @@ const onChangePassword = function (event) {
 
 // calling id from html when form is submitted
 const addHandlers = () => {
-  $('#sign-up').on('submit', onSignUp)
+  $('#signUp').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)

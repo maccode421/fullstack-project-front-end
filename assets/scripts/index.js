@@ -13,6 +13,6 @@ $(() => {
 // use require without a reference to ensure a file is bundled
 require('./example')
 
-$(document).ready(function () {
-  $("")
-})
+// $(document).ready(function () {
+// $('#signUp').on(submit)
+// })

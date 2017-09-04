@@ -1,12 +1,13 @@
 'use strict'
 
-const app = require('../app')
+const app = require('./app.js')
 // const getFormFields = require('../../../lib/get-form-fields.js');
 
 // authApi.signUp(authUi.success, authUi.failure, data);
 
 const signUp = function (data) {
   console.log(data)
+  $('#signUp').html('Sign up successful.')
   return $.ajax({
     url: app.host + '/sign-up/',
     method: 'POST',
