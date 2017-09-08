@@ -21,18 +21,16 @@
 
       <h1>Catch Us If You Can</h1>
 
-
-
       <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Sign Up
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <form id="signUp">
-            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-            <input type="password" class="form-control" id="InputPassword" placeholder="Password">
-            <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm Password">
-            <input class="btn btn-primary btn-sm" type="submit" value="Sign up">
+            <input type="email" class="form-control" name="credentials[email]" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+            <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input class="btn btn-primary btn-sm" type="submit" name="submit" value="Sign up">
           </form>
         </div>
     </div>
@@ -43,19 +41,59 @@
       </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <form id="signIn">
-            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
-            <input type="password" class="form-control" id="ChangePassword" placeholder="Change Password">
+            <input type="email" class="form-control" name="credentials[email]" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
             <input class="btn btn-primary btn-sm" type="submit" value="Sign in">
           </form>
         </div>
     </div>
 
-    <button type="button" id="signOut" class="btn btn-primary btn-sm">Sign Out</button>
+    <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Change Password
+    </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <form id="changePassword">
+          <input type="password" class="form-control" name="credentials[old]" placeholder="Old Password">
+          <input type="password" class="form-control" name="credentials[new]" placeholder="New Password">
+          <input class="btn btn-primary btn-sm" type="submit" name="submit" value="Change Password">
+        </form>
+      </div>
+  </div>
 
-    <form method="post">
-      <button type="button" id="postId" class="btn btn-primary btn-lg">Create Post</button>
-    </form>
+  <div id="signOut">
+    <button type="submit" class="btn btn-primary btn-sm">Sign Out</button>
+  </div>
+
+    <!-- Button trigger modal -->
+<button type="button" id="postButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
+  Create Post
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Fish Tales</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <h5>add photo</h5>
+          <input placeholder="place images here">
+          <h5>catch date</h5>
+          <input type="date" placeholder="catch date">
+          <h5>tell your tale</h5>
+          <textarea name="content" id="contentBox" rows=2 cols=20></textarea>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="savePost" class="btn btn-primary">Save Post</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     </body>
 </html>

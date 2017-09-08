@@ -9,14 +9,14 @@ h1 {
   // border: groove;
   color: #06ace8;
   font-family: fantasy;
-  font-size: 42px;
+  font-size: 50px;
   font-style: oblique;
   font-weight: bolder;
   left: 75px;
   margin-top: 0;
   position: absolute;
   text-shadow: 4px 2px #000916;
-  top: 10px;
+  top: 15px;
 }
 
 img {
@@ -34,20 +34,24 @@ img {
   font-style: oblique;
   position: absolute;
   right: 75px;
-  text-shadow: 4px 2px #000916;
   top: 361px;
 }
 
-#postId {
+#postButton {
   bottom: 50px;
   font-style: oblique;
   left: 70px;
   position: absolute;
 }
 
-.seafood {
-  border: groove;
+#contentBox {
+  height: 100px;
+  width: 400px;
 }
+
+// .seafood {
+// border: groove;
+// }
 
 .dropdown {
   // border: groove;

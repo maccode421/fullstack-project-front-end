@@ -1,36 +1,55 @@
 'use strict'
 // remove signIn and signOut
-const app = require('../app.js')
+const app = require('./app.js')
 
 // remove me before code-along
 const signInSuccess = (data) => {
   app.user = data.user
   console.log(app)
-  console.log('sign in success!')
+  console.log('Sign in successful.')
 }
 
 // remove me before code-along
 const signOutSuccess = () => {
   app.user = null
   console.log(app)
+  console.log('Sign out successful.')
 }
 
 const changePasswordSuccess = () => {
   console.log('Password Successfully Changed.')
 }
 
+const createPostSuccess = (data) => {
+  app.user = data.user
+  app.user.id = data.user.id
+  console.log(data)
+  console.log('Success')
+}
+
+const createCommentSuccess = (data) => {
+  app.user = data.user
+  app.user.id = data.user.id
+  console.log(data)
+  console.log('Success')
+}
+
 const success = (data) => {
+  console.log('success')
   console.log(data)
 }
 
-const failure = (error) => {
+const fail = (error) => {
+  console.log('failed')
   console.error(error)
 }
 
 module.exports = {
-  failure,
+  fail,
   success,
   signInSuccess,
   signOutSuccess,
-  changePasswordSuccess
+  changePasswordSuccess,
+  createPostSuccess,
+  createCommentSuccess
 }

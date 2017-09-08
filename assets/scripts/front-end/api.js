@@ -6,8 +6,6 @@ const app = require('./app.js')
 // authApi.signUp(authUi.success, authUi.failure, data);
 
 const signUp = function (data) {
-  console.log(data)
-  $('#signUp').html('Sign up successful.')
   return $.ajax({
     url: app.host + '/sign-up/',
     method: 'POST',
@@ -26,7 +24,12 @@ const signIn = function (data) {
   return $.ajax({
     url: app.host + '/sign-in/',
     method: 'POST',
-    data
+    data: {
+      'credentials': {
+        'email': data.credentials.email,
+        'password': data.credentials.password
+      }
+    }
   })
 }
 
@@ -47,7 +50,34 @@ const changePassword = function (data) {
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
-    data: data
+    data: {
+      'passwords': {
+        'old': data.credentials.old,
+        'new': data.credentials.new
+      }
+    }
+  })
+}
+
+const createPost = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/games/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const createComment = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/games/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
   })
 }
 
@@ -55,5 +85,7 @@ module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword
+  changePassword,
+  createPost,
+  createComment
 }
