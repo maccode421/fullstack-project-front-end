@@ -40,16 +40,18 @@ const onChangePassword = function (event) {
 
 const onCreatePost = function (event) {
   event.preventDefault()
-  api.createPost()
+  const data = getFormFields(event.target)
+  api.createPost(data)
     .then(ui.createPostSuccess)
-    .catch(ui.createPostSuccessFailure)
+    .catch(ui.createPostFailure)
 }
 
 const onCreateComment = function (event) {
   event.preventDefault()
-  api.createComment()
+  const data = getFormFields(event.target)
+  api.createComment(data)
     .then(ui.createCommentSuccess)
-    .catch(ui.createCommentSuccessFailure)
+    .catch(ui.createCommentFailure)
 }
 
 // calling id from html when form is submitted

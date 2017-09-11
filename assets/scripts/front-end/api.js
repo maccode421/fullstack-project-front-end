@@ -62,7 +62,7 @@ const changePassword = function (data) {
 const createPost = (data) => {
   console.log(data)
   return $.ajax({
-    url: app.host + '/posts/',
+    url: app.host + '/posts',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + app.user.token
