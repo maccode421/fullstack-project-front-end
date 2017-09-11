@@ -22,7 +22,6 @@ const changePasswordSuccess = () => {
 
 const createPostSuccess = (data) => {
   app.user = data.user
-  app.user.id = data.user.id
   console.log(data)
   console.log('Post Successfully Created')
 }
