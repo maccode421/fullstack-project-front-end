@@ -24,14 +24,14 @@ const createPostSuccess = (data) => {
   app.user = data.user
   app.user.id = data.user.id
   console.log(data)
-  console.log('Success')
+  console.log('Post Successfully Created')
 }
 
 const createCommentSuccess = (data) => {
   app.user = data.user
   app.user.id = data.user.id
   console.log(data)
-  console.log('Success')
+  console.log('Comment Successfully Created')
 }
 
 const success = (data) => {

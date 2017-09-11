@@ -62,8 +62,42 @@ const changePassword = function (data) {
 const createPost = (data) => {
   console.log(data)
   return $.ajax({
-    url: app.host + '/games/',
+    url: app.host + '/posts/',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const showPost = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/posts/' + app.user.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const updatePost = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: app.host + '/posts/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+
+    }
+  })
+}
+
+const deletePost = function () {
+  return $.ajax({
+    method: 'DELETE',
+    url: app.host + '/posts/' + app.user.id,
     headers: {
       Authorization: 'Token token=' + app.user.token
     }
@@ -73,8 +107,42 @@ const createPost = (data) => {
 const createComment = (data) => {
   console.log(data)
   return $.ajax({
-    url: app.host + '/games/',
+    url: app.host + '/comments/',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const showComment = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/comments/' + app.user.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const updateComment = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: app.host + '/comments/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+
+    }
+  })
+}
+
+const deleteComment = function () {
+  return $.ajax({
+    method: 'DELETE',
+    url: app.host + '/comments/' + app.user.id,
     headers: {
       Authorization: 'Token token=' + app.user.token
     }
@@ -87,5 +155,11 @@ module.exports = {
   signOut,
   changePassword,
   createPost,
-  createComment
+  showPost,
+  updatePost,
+  deletePost,
+  createComment,
+  showComment,
+  updateComment,
+  deleteComment
 }

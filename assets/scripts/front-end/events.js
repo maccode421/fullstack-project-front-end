@@ -22,6 +22,7 @@ const onSignIn = function (event) {
 }
 
 const onSignOut = function (event) {
+  console.log('hit')
   event.preventDefault()
   const data = getFormFields(event.target)
   api.signOut(data)

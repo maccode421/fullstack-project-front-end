@@ -61,14 +61,16 @@
       </div>
   </div>
 
-  <div id="signOut">
+  <form id="signOut">
     <button type="submit" class="btn btn-primary btn-sm">Sign Out</button>
-  </div>
+  </form>
 
     <!-- Button trigger modal -->
 <button type="button" id="postButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
   Create Post
 </button>
+
+<form id="posts"></form>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -79,17 +81,16 @@
       </div>
       <div class="modal-body">
         <form>
-          <h5>add photo</h5>
-          <input placeholder="place images here">
-          <h5>catch date</h5>
-          <input type="date" placeholder="catch date">
-          <h5>tell your tale</h5>
-          <textarea name="content" id="contentBox" rows=2 cols=20></textarea>
+          <h5>Catch Date</h5>
+          <input type="date" id="catchDate">
+          <h5>Add Photo</h5>
+          <input type="file" id="addPhoto" name="pic" accept="image/*">
+            <!-- <input type="submit"> -->
+          <h5>Tell Your Tale</h5>
+          <textarea name="content" id="addContent" rows=2 cols=20></textarea>
+          <button type="submit" id="postContent" class="btn btn-primary">Save Post</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" id="savePost" class="btn btn-primary">Save Post</button>
       </div>
     </div>
   </div>
