@@ -4,13 +4,11 @@ About Project:
 A platform for people that love fishing and catching other water creatures to post photos and share stories. A user has to be logged in to post and comment. To post, user clicks post button, a window pops up and that's where they can upload an image and write content.
 
 Links:
-deployed link https://maccode421.github.io/fullstack-project-front-end/
-=======
 front-end: https://github.com/maccode421/fullstack-project-front-end
 back-end: https://github.com/maccode421/fullstack-project
 heroku: https://sleepy-wildwood-88967.herokuapp.com/
 deployed link: https://maccode421.github.io/fullstack-project-front-end/
->>>>>>> wildwood2
+
 
 Technologies Used:
 
