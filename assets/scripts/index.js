@@ -30,7 +30,6 @@ $(document).ready(function () {
       catch_date: $('#catchDate').val(),
       content: $('addContent').val()
     }
-    post.push(post)
     render(post)
   })
 })
