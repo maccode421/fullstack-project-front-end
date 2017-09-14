@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-  host: 'http://localhost:4741'
+  host: ' https://sleepy-wildwood-88967.herokuapp.com/'
 }

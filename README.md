@@ -6,7 +6,7 @@ A platform for people that love fishing and catching other water creatures to po
 Links:
 front-end: https://github.com/maccode421/fullstack-project-front-end
 back-end: https://github.com/maccode421/fullstack-project
-heroku: https://sleepy-wildwood-88967.herokuapp.com/
+heroku:  https://sleepy-wildwood-88967.herokuapp.com/
 deployed link: https://maccode421.github.io/fullstack-project-front-end/
 
 
