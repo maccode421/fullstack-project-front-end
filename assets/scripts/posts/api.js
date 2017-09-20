@@ -1,6 +1,7 @@
 'use strict'
 
 const app = require('./app.js')
+const config = require('../config.js')
 // const getFormFields = require('../../../lib/get-form-fields.js');
 
 // authApi.signUp(authUi.success, authUi.failure, data);
@@ -59,48 +60,40 @@ const changePassword = function (data) {
   })
 }
 
-const createPost = (data) => {
-  console.log(data)
+const index = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/posts',
+    method: 'GET'
+  })
+}
+
+const show = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/posts/' + id,
+    method: 'GET'
+  })
+}
+
+const update = (data) => {
+  return $.ajax({
+    url: app.host + '/posts/' + data.post.id,
+    method: 'PATCH',
+    data
+  })
+}
+
+const destroy = (id) => {
+  return $.ajax({
+    url: app.host + '/posts/' + id,
+    method: 'DELETE'
+  })
+}
+
+const create = (data) => {
   return $.ajax({
     url: app.host + '/posts',
     method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    }
-  })
-}
-
-const showPost = (data) => {
-  console.log(data)
-  return $.ajax({
-    url: app.host + '/posts/' + app.user.id,
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    }
-  })
-}
-
-const updatePost = function (data) {
-  return $.ajax({
-    method: 'PATCH',
-    url: app.host + '/posts/' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    },
-    data: {
-
-    }
-  })
-}
-
-const deletePost = function () {
-  return $.ajax({
-    method: 'DELETE',
-    url: app.host + '/posts/' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    }
+    data
   })
 }
 
@@ -154,10 +147,12 @@ module.exports = {
   signIn,
   signOut,
   changePassword,
-  createPost,
-  showPost,
-  updatePost,
-  deletePost,
+  // createPost,
+  index,
+  show,
+  update,
+  destroy,
+  create,
   createComment,
   showComment,
   updateComment,

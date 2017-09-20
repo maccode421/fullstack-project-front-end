@@ -1,65 +1,65 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
-body {
-  background-color: #06ace8;
-}
-
-h1 {
-  // border: groove;
-  color: #06ace8;
-  font-family: fantasy;
-  font-size: 50px;
-  font-style: oblique;
-  font-weight: bolder;
-  left: 75px;
-  margin-top: 0;
-  position: absolute;
-  text-shadow: 4px 2px #000916;
-  top: 15px;
-}
-
-img {
-  border-radius: 7px;
-  height: 350px;
-  left: 70px;
-  opacity: .7;
-  padding-top: 5px;
-  position: absolute;
-  width: 90%;
-}
-
-#signOut {
-  // float: right;
-  font-style: oblique;
-  position: absolute;
-  right: 75px;
-  top: 361px;
-}
-
-#postButton {
-  bottom: 50px;
-  font-style: oblique;
-  left: 70px;
-  position: absolute;
-}
-
-textarea {
-  height: 100px;
-  width: 400px;
-}
-
-// .seafood {
-// border: groove;
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+//
+// body {
+//   background-color: #06ace8;
 // }
-
-.dropdown {
-  // border: groove;
-  display: inline-block;
-  float: inherit;
-  font-style: oblique;
-  padding-left: 70px;
-  padding-top: 355px;
-  // position: absolute;
-  text-shadow: 4px 2px #000916;
-}
+//
+// h1 {
+//   // border: groove;
+//   color: #06ace8;
+//   font-family: fantasy;
+//   font-size: 50px;
+//   font-style: oblique;
+//   font-weight: bolder;
+//   left: 75px;
+//   margin-top: 0;
+//   position: absolute;
+//   text-shadow: 4px 2px #000916;
+//   top: 15px;
+// }
+//
+// img {
+//   border-radius: 7px;
+//   height: 350px;
+//   left: 70px;
+//   opacity: .7;
+//   padding-top: 5px;
+//   position: absolute;
+//   width: 90%;
+// }
+//
+// #signOut {
+//   // float: right;
+//   font-style: oblique;
+//   position: absolute;
+//   right: 75px;
+//   top: 361px;
+// }
+//
+// #postButton {
+//   bottom: 50px;
+//   font-style: oblique;
+//   left: 70px;
+//   position: absolute;
+// }
+//
+// textarea {
+//   height: 100px;
+//   width: 400px;
+// }
+//
+// // .seafood {
+// // border: groove;
+// // }
+//
+// .dropdown {
+//   // border: groove;
+//   display: inline-block;
+//   float: inherit;
+//   font-style: oblique;
+//   padding-left: 70px;
+//   padding-top: 355px;
+//   // position: absolute;
+//   text-shadow: 4px 2px #000916;
+// }

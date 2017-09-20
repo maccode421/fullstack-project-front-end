@@ -38,12 +38,57 @@ const onChangePassword = function (event) {
     .fail(ui.fail)
 }
 
+const onGetPosts = function (event) {
+  event.preventDefault()
+  api.index()
+    .then(ui.onSuccess)
+    .catch(ui.onError)
+}
+
+const onGetPost = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const post = data.post
+  if (post.id.length !== 0) {
+    api.show(post.id)
+      .then(ui.onSuccess)
+      .catch(ui.onError)
+  } else {
+    console.log('Please provide a post id!')
+  }
+}
+
+const onUpdatePost = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  if (data.id.length !== 0) {
+    api.update(data.id)
+      .then(ui.onUpdateSuccess)
+      .catch(ui.onError)
+  } else {
+    console.log('Please provide a post id!')
+  }
+}
+
+const onDeletePost = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const post = data.post
+  if (post.id.length !== 0) {
+    api.destroy(post.id)
+      .then(ui.onDeleteSuccess)
+      .catch(ui.onError)
+  } else {
+    console.log('Please provide a post id!')
+  }
+}
+
 const onCreatePost = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.createPost(data)
-    .then(ui.createPostSuccess)
-    .catch(ui.createPostFailure)
+  api.create(data)
+    .then(ui.onCreateSuccess)
+    .catch(ui.onError)
 }
 
 const onCreateComment = function (event) {
@@ -67,6 +112,10 @@ module.exports = {
   onSignIn,
   onSignOut,
   onChangePassword,
+  onGetPosts,
+  onGetPost,
+  onUpdatePost,
+  onDeletePost,
   onCreatePost,
   onCreateComment,
   addHandlers
